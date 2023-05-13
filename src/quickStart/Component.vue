@@ -7,12 +7,13 @@ export default {
     },
     data() {
         return {
-            greeting: 'Hello'
+            childMsg: 'No child msg yet'
         }
-    },
+    }
 }
 </script>
 
 <template>
-    <ChildComp :msg="greeting"/>
+    <ChildComp @response="(msg) => childMsg = msg" />
+    <p>{{ childMsg }}</p>
 </template>
