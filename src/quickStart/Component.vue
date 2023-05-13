@@ -7,13 +7,12 @@ export default {
     },
     data() {
         return {
-            childMsg: 'No child msg yet'
+            msg: 'from parent'
         }
     }
 }
 </script>
 
 <template>
-    <ChildComp @response="(msg) => childMsg = msg" />
-    <p>{{ childMsg }}</p>
+    <ChildComp>Message: {{ msg }}</ChildComp>
 </template>
