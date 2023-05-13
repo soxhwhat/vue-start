@@ -4,10 +4,15 @@ import ChildComp from './ChildComp.vue'
 export default {
     components: {
         ChildComp
-    }
+    },
+    data() {
+        return {
+            greeting: 'Hello'
+        }
+    },
 }
 </script>
 
 <template>
-    <ChildComp />
+    <ChildComp :msg="greeting"/>
 </template>
