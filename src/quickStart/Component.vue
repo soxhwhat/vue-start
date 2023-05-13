@@ -11,6 +11,8 @@ setTimeout(() => {
 const change = (value) => {
     console.log('父组件接收到子组件传递的值', value)
 }
+
+const childRef = ref(null)
 </script>
 
 <template>
@@ -19,4 +21,7 @@ const change = (value) => {
 
 <!--    子传父-->
     <ChildComp @change="change"></ChildComp>
+
+<!--    父组件传递子组件属性-->
+    <ChildComp ref="childRef"></ChildComp>
 </template>
